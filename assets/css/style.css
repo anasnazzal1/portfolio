@@ -1,0 +1,950 @@
+@import "base.css";
+
+
+/* start header */
+.header {
+
+    background-image: url("../img/header/bachground-header.jpeg");
+    background-size: cover;
+
+    background-position: center center;
+    min-height: 100vh;
+    height: fit-content;
+    padding: 0px 15px 15px 0px;
+
+}
+
+/* for logo */
+.navbar-brand img,
+img[src="assets/img/public/mainLogo.png"] {
+    width: 100px;
+    height: 30px;
+}
+
+/* ------ */
+
+/* start navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .navbar-nav li a {
+
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+}
+
+
+/* end navbar */
+/*start information section */
+/* .information--section .start {
+    width: 100%;
+} */
+.information--section .container {
+    height: fit-content;
+}
+
+.information--section .start .job-start {
+    font-weight: 300;
+    font-size: 15px;
+    color: #ffff;
+}
+
+.information--section .start h1 {
+    font-weight: 600;
+    font-size: 60px;
+    color: #ffff;
+}
+
+.information--section .start h1 span {
+    color: var(--third-color);
+}
+
+.information--section .start p {
+    font-weight: 400;
+    color: #ffff;
+}
+
+.information--section .start .btns .btn {
+    border: 1px solid var(--third-color);
+}
+
+.information--section .start .btns .btn:hover {
+    background-color: var(--third-color);
+    transform: translateY(-2px);
+    transition: transform 0.2s;
+
+
+}
+
+.information--section .start p,
+.information--section .start .job-start,
+.information--section .start .btns {
+    line-height: 27px;
+}
+
+.information--section .end .img-end {
+    width: 100%;
+}
+
+.information--section .end .img-end img {
+    width: 100%;
+}
+
+@media (max-width:407px) {
+    .information--section .start h1 {
+        font-size: 40px;
+    }
+
+}
+
+/*end information section  */
+
+/* end header */
+/* start main */
+/* start My resume */
+.resume--section,
+.Expertise--section {
+    background-color: #F8F9F9;
+}
+
+.resume--section .text--resume .resume--title,
+.text--work .work--title {
+    border: 1px solid var(--third-color);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--third-color);
+
+}
+
+.resume--section .text--resume h2,
+.text--work h2 {
+    line-height: 50px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.resume--section .contect-resume-tab .nav-item,
+.contect-work-tab .nav-item {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.resume--section .contect-resume-tab button,
+.contect-work-tab button {
+    color: black;
+}
+
+.resume--section .contect-resume-tab button.active,
+.work--section .contect-work-tab button.active {
+    background-color: #E8BF96;
+}
+
+.resume--section .contect-resume-tab .nav-tabs {
+    background-color: #F2E5D6;
+}
+
+.resume--section .about--me .start h3,
+.about--me .start h3 {
+    font-size: 21px;
+    font-weight: 500;
+    color: #1D1D1D;
+    line-height: 38px;
+}
+
+.resume--section .about--me .start p,
+.about--me .start p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #696969;
+}
+
+.resume--section .about--me .end img,
+.about--me .end img {
+    width: 70%;
+    border-radius: 50px;
+    ;
+}
+
+.list-group-item .fa-github,
+.list-group-item .fa-linkedin {
+    font-size: 20px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+
+.list-group-item .fa-github:hover,
+.list-group-item .fa-linkedin:hover {
+    color: black;
+}
+
+@media (max-width: 410px) {
+
+    .resume--section .text--resume h2,
+    .text--work h2 {
+
+        font-size: 20px;
+
+    }
+}
+
+@media (max-width: 340px) {
+
+    .resume--section .text--resume h2,
+    .text--work h2 {
+
+        font-size: 15px;
+
+    }
+}
+
+@media (max-width:493px) {
+
+    .resume--section .container,
+    .work--section .container {
+        width: 100%;
+
+
+
+    }
+
+    .resume--section,
+    .work--section {
+        padding: 0 !important;
+    }
+
+    .resume--section .contect-resume-tab .rounded-pill,
+    .work--section .contect-work-tab .rounded-pill {
+        border-radius: 5px !important;
+    }
+}
+
+@media (max-width: 419px) {
+
+    .resume--section .contect-resume-tab .about--me h3,
+    .work--section .contect-work-tab .about--me h3 {
+        font-size: 15px;
+    }
+
+    .resume--section .contect-resume-tab .about--me ul li a,
+    .work--section .contect-work-tab .about--me ul li a {
+        font-size: 10px;
+    }
+}
+
+.resume--section .contect-resume-tab .experience--item,
+.resume--section .contect-resume-tab .education--item,
+.work--section .contect-work-tab .experience--item,
+.work--section .contect-work-tab .education--item {
+    border: 3px solid #EBECEC;
+}
+
+.resume--section .contect-resume-tab .experience--item div,
+.resume--section .contect-resume-tab .education--item div,
+.work--section .contect-work-tab .experience--item div,
+.work--section .contect-work-tab .education--item div {
+    color: var(--third-color);
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.resume--section .contect-resume-tab .experience--item h3,
+.resume--section .contect-resume-tab .education--item h3,
+.work--section .contect-work-tab .experience--item h3,
+.work--section .contect-work-tab .education--item h3 {
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 37px;
+}
+
+.resume--section .contect-resume-tab .experience--item h4,
+.resume--section .contect-resume-tab .education--item h4,
+.work--section .contect-work-tab .experience--item h4,
+.work--section .contect-work-tab .education--item h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #696969;
+    line-height: 18px;
+}
+
+.resume--section .contect-resume-tab .experience--item p,
+.resume--section .contect-resume-tab .education--item p,
+.work--section .contect-work-tab .experience--item p,
+.work--section .contect-work-tab .education--item p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #696969;
+}
+
+.resume--section .contect-resume-tab .skills--item,
+.work--section .contect-work-tab .skills--item {
+    background-color: #262629;
+
+}
+
+.resume--section .contect-resume-tab .skills--item i,
+.work--section .contect-work-tab .skills--item i {
+    font-size: 60px;
+}
+
+.resume--section .contect-resume-tab .skills--item p,
+.work--section .contect-work-tab .skills--item p {
+    font-size: 30px;
+}
+
+.resume--section .contect-resume-tab .skills--item h3,
+.work--section .contect-work-tab .skills--item h3 {
+    font-size: 14px;
+    color: #DDDDDD;
+}
+
+.resume--section .contect-resume-tab .skills--item {
+    transition: all 0.6s ease-in-out;
+}
+
+.resume--section .contect-resume-tab .skills--item i {
+    transition: all 0.3s ease-in-out;
+
+}
+
+.resume--section .contect-resume-tab .skills--item:hover {
+    transform: scale(1.1);
+}
+
+.resume--section .contect-resume-tab .skills--item:hover i {
+    color: #ADD8E6;
+    ;
+}
+
+@media (max-width: 567px) {
+    .skills--item {
+        width: 70%;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/* end My resume */
+/* start download cv */
+
+.download--cv {
+    background-color: #1D1D1D;
+}
+
+.download--cv h2 {
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.download--cv .info--cv--item span {
+    font-size: 40px;
+    font-weight: 600;
+
+}
+
+.download--cv .info--cv--item h3 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #EFEFEF;
+
+}
+
+.download--cv button {
+    font-size: 15px;
+    font-weight: 400;
+    background-color: var(--third-color);
+}
+
+
+.download--cv button:hover {
+
+    transform: translateY(-2px);
+    transition: transform 0.2s;
+}
+
+@media (max-width: 607px) {
+    .download--cv h2 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+/* end download cv */
+/* start my work */
+.Branding .img--Branding,
+.All .img--All {
+    overflow: hidden;
+
+}
+
+.Branding .img--Branding img,
+.All .img--All img {
+
+    width: 100%;
+    border-radius: 7px;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.Branding .img--Branding:hover img,
+.All .img--All:hover img {
+    transform: scale(1.1);
+    opacity: 0.6;
+
+}
+
+.Branding .img--Branding a,
+.All .img--All a {
+    display: none;
+}
+
+.Branding .img--Branding:hover a,
+.All .img--All:hover a {
+    display: block;
+}
+
+.Branding .img--Branding a,
+.All .img--All a {
+    cursor: pointer;
+    left: 40px;
+    bottom: 70px;
+    background-color: #1D1D1D;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+@media (max-width:767px) {
+
+    .Branding .img--Branding,
+    .All .img--All {
+        margin: auto;
+    }
+}
+
+@media (max-width:813px) {
+    .work--section .contect-work-tab ul {
+
+        flex-direction: column;
+    }
+
+}
+
+/* end my work */
+/* start My Expertise */
+.Expertise--section .Expertise--item {
+    border: 2px solid #EBECEC;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.Expertise--section .Expertise--item>i {
+    font-size: 50px;
+}
+
+.Expertise--section .Expertise--item span {
+    color: #5E5F5F;
+    display: block;
+    font-weight: 400;
+    line-height: 24px;
+
+
+}
+
+.Expertise--section .Expertise--item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1D1D1D;
+    line-height: 20px;
+}
+
+.Expertise--section .Expertise--item p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #5E5F5F;
+
+}
+
+.Expertise--section .Expertise--item a>i {
+    font-size: 14px;
+    transform: rotate(-40deg);
+
+}
+
+.Expertise--section .Expertise--item a {
+    transition: all 0.6s;
+    font-size: 14px;
+}
+
+.Expertise--section .Expertise--item a:hover {
+
+    color: var(--third-color) !important;
+
+}
+
+@media (max-width: 1200px) {
+    .Expertise--section .Expertise--item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 790px) {
+    .Expertise--section .Expertise--item {
+        width: 90%;
+    }
+}
+
+@media (max-width: 786px) {
+    .Expertise--section .Expertise--content {
+        justify-content: center;
+    }
+}
+
+/* end My Expertise */
+/* start feadback */
+.feedback .feedback--content .carousel-item .img--feadback img {
+    width: 80px;
+    height: 80px;
+}
+
+.feedback .feedback--content .carousel-item p {
+    font-size: 22px;
+    font-weight: 400;
+    color: #1D1D1D;
+    max-width: 80vh;
+}
+
+.feedback .feedback--content .carousel-item h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1D1D1D;
+}
+
+.feedback .feedback--content .carousel-item h4 {
+    font-size: 15px;
+    font-weight: 300;
+    color: #696969;
+}
+
+.feedback .feedback--content .carousel-control-prev,
+.feedback .feedback--content .carousel-control-next {
+    background-color: var(--secound-color);
+    top: 50%;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid #9B9B9B;
+    border-radius: 50%;
+    transition: all 0.7s;
+
+}
+
+.feedback .feedback--content .carousel-control-prev:hover,
+.feedback .feedback--content .carousel-control-next:hover {
+    background-color: var(--third-color);
+}
+
+@media (max-width: 780px) {
+
+    .feedback .container,
+    .container-sm {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width:590px) {
+    .feedback .feedback--content .carousel-item p {
+        max-width: 40vh;
+    }
+}
+
+/* end feadback */
+/* start blog */
+main .blog--section {
+    background-color: #F8F9F9;
+}
+
+.blog--section .blog--content h3 {
+    font-size: 21px;
+    font-weight: 500;
+    color: #1D1D1D;
+    line-height: 30px;
+
+}
+
+.blog--section .blog--content a {
+    font-size: 14px;
+    font-weight: 300;
+    color: #1D1D1D;
+    transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
+
+.blog--section .blog--content .img--blog img {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.blog--section .blog--content a i {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+.blog--section .blog--content a:hover {
+
+    color: var(--third-color) !important;
+
+}
+
+/* end blog */
+/* start contact */
+.contact--section .start h3 {
+    font-size: 14px;
+    font-weight: 500;
+
+
+}
+
+.contact--section .start p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #696969;
+
+
+}
+
+.contact--section .start i {
+    font-size: 26px;
+    color: #EBB884;
+    border: 1px solid #EEE7EA;
+    padding: 10px;
+    border-radius: 50%;
+
+
+}
+
+.contact--section .end button {
+    background-color: var(--third-color);
+    transition: transform 0.4s;
+
+}
+
+.contact--section .end button:hover {
+    transform: translateY(-3px);
+
+}
+
+@media (max-width: 582px) {
+    .contact--section .end .submit--information {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* end contact */
+/* end main */
+
+/* start footer */
+.footer,
+.the--end {
+    background-color: #1A1A1A;
+}
+
+.footer h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffff;
+
+}
+
+.footer .Address address {
+    font-size: 15px;
+    font-weight: 300;
+    color: #B8B8B8;
+}
+
+.footer .Say--Hello nav a {
+    font-size: 15px;
+    font-weight: 300;
+    color: #B8B8B8;
+}
+
+.footer .Say--Hello nav a:nth-child(2) {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--third-color);
+}
+
+.footer .Social nav a {
+    font-size: 13px;
+    font-weight: 400;
+    transition: all 0.7s;
+}
+
+.footer .Social nav a:hover {
+    color: var(--third-color) !important;
+}
+
+.footer .Newsletter input {
+    background-color: #484848;
+}
+
+.footer .Newsletter input::placeholder {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer button {
+    background-color: var(--third-color);
+    transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
+
+.footer .Newsletter .Newsletter--item input {
+    box-shadow: none !important;
+}
+
+.footer .Newsletter .Newsletter--item {
+    transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
+
+.footer .Newsletter .Newsletter--item:focus-within {
+    border-radius: 7px;
+    border: 1px solid var(--third-color) !important;
+
+}
+
+.footer {
+    border-bottom: 1px solid gray;
+}
+
+
+/* end footer */
+/* navbar after scroll */
+.nav-af-scrol {
+    background-color: white;
+
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+/* icon to scroll ro top */
+.scroll-to-top {
+    background: var(--third-color);
+
+    bottom: 10px;
+    right: 14px;
+
+}
+
+/* to change color of item in navbar if active */
+.active--item {
+    color: var(--third-color) !important;
+}
+
+/* the css for loader */
+.loading {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    font-size: 48px;
+    color: #FFF;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    position: relative;
+}
+
+.loader:after {
+    content: 'Loading';
+    position: relative;
+    z-index: 5;
+}
+
+.loader:before {
+    content: '';
+    height: 6px;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background: linear-gradient(#FF3D00 100%, transparent 0) no-repeat;
+    background-size: 0% auto;
+    animation: 10s lineGrow linear infinite;
+}
+
+@keyframes lineGrow {
+    to {
+        background-size: 100% auto
+    }
+}
+
+/* end the css for loader */
+
+/* light and dark mode  */
+
+.label-darkMode {
+    width: 50px;
+    height: 20px;
+    position: relative;
+    display: block;
+    background-color: #ebebeb;
+    border-radius: 20px;
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.label-darkMode:after {
+    content: "";
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 180px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    z-index: 10000;
+}
+
+.dark--lihtMode {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.dark--lihtMode:checked+.label-darkMode {
+    background-color: #242424;
+}
+
+.dark--lihtMode:checked+.label-darkMode:after {
+    left: 50px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+.label-darkMode:active:after {
+    width: 20px;
+}
+
+
+/* .dark--lihtMode:checked + .label-darkMode + .background {
+    background: #242424;
+} */
+.dark {
+    background: #242424;
+}
+
+.label-darkMode svg {
+    position: absolute;
+    width: 20px;
+    top: 1px;
+    z-index: 100;
+}
+
+.label-darkMode svg.son {
+    fill: #fff;
+    transition: 0.3s;
+    left: 1px;
+    width: 20px;
+    height: fit-content;
+
+}
+
+.label-darkMode svg.moon {
+    fill: #7e7e7e;
+    transition: 0.3s;
+    left: 30px;
+    height: fit-content;
+
+}
+
+.dark--lihtMode:checked+.label-darkMode svg.son {
+    fill: #7e7e7e;
+    ;
+}
+
+.dark--lihtMode:checked+.label-darkMode svg.moon {
+    fill: #fff;
+    ;
+}
+
+.dark--lihtMode:checked~.navbar-toggler {
+    border-color: white !important;
+}
+
+
+/* end light and dark mode */
+/* icon toggle in navbar */
+
+.navarToggleIcon {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path stroke="white" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>');
+
+
+}
+
+.navbarToggler {
+    border-color: white !important;
+
+}
+
+.dark--modeColor {
+    background-color: #1D1D1D !important;
+}
+
+
+
+
+
+/* end icon toggle in navbar */

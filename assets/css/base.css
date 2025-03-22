@@ -1,0 +1,10 @@
+:root {
+    --main-color:white ;
+    --secound-color:#696969;
+    --third-color: #EBB884;
+    --main-font:"Sora", sans-serif;
+}
+
+body {
+    font-family: var(--main-font) !important;
+}
