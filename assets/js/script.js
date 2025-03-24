@@ -3,66 +3,102 @@
 let navbar = document.querySelector(".navbar");
 let navItem = document.querySelectorAll(".navbar-nav li a");
 let imgNav = document.querySelector(".navbar-brand img");
-let btnNavbar = document.querySelector(".navbar-toggler");
 let checkbox = document.getElementById("darkmode--toogle");
-window.addEventListener("scroll", () => {
-    if (window.scrollY >= 100) {
+let navbarCollapse = document.querySelector(".navbar-collapse");
+let navbarToggler = document.querySelector(".navbar-toggler");
+
+function updateNavbarStyle() {
+    let scrolled = window.scrollY >= 100;
+    let atTop = window.scrollY === 0;
+    let menuOpen = navbarCollapse.classList.contains("show");
+
+    if (scrolled || (menuOpen &&atTop) ) {
         navbar.classList.add("nav-af-scrol");
-        for (let i = 0; i < navItem.length; i++) {
-            navItem[i].classList.add("text-black");
-            navItem[i].classList.remove("text-white");
-        }
-        imgNav.setAttribute("src", "assets/img/public/logo-2-inverted-removebg-preview.png")
+        navItem.forEach(item => {
+            item.classList.add("text-black");
+            item.classList.remove("text-white");
+        });
+        imgNav.setAttribute("src", "assets/img/public/logo-2-inverted-removebg-preview.png");
+        
 
-        // to chek light or dRK MODE
         if (checkbox.checked) {
-
             navbar.classList.add("dark");
-            for (let i = 0; i < navItem.length; i++) {
-                navItem[i].classList.remove("text-black");
-                navItem[i].classList.add("text-white");
-            }
-            imgNav.setAttribute("src", "assets/img/public/mainLogo.png")
-
-
+            navItem.forEach(item => {
+                item.classList.remove("text-black");
+                item.classList.add("text-white");
+            });
+            imgNav.setAttribute("src", "assets/img/public/mainLogo.png");
+            navbarTogglerIcon.classList.add("navarToggleIcon");
+            navbarToggler.classList.add("navbarToggler")
         } else {
-
             navbar.classList.remove("dark");
-            for (let i = 0; i < navItem.length; i++) {
-                navItem[i].classList.add("text-black");
-                navItem[i].classList.remove("text-white");
-            }
-            imgNav.setAttribute("src", "assets/img/public/logo-2-inverted-removebg-preview.png")
-
-
+            navbarTogglerIcon.classList.remove("navarToggleIcon");
+            navbarToggler.classList.remove("navbarToggler")
         }
-        //end to chek light or dRK MODE
-
-
-    }
-
-    else {
+    } else if (atTop && !menuOpen) {
         navbar.classList.remove("nav-af-scrol");
-        for (let i = 0; i < navItem.length; i++) {
-            navItem[i].classList.remove("text-black");
-            navItem[i].classList.add("text-white");
+        navbar.classList.remove("dark");
+        navItem.forEach(item => {
+            item.classList.remove("text-black");
+            item.classList.add("text-white");
+        });
+        imgNav.setAttribute("src", "assets/img/public/mainLogo.png");
+
+        // هنا قمنا بإخفاء الخلفية عندما يكون scroll == 0 ولا يوجد show
+        navbar.classList.remove("background");
+    } else {
+        navbar.classList.remove("nav-af-scrol");
+        navbar.classList.remove("dark");
+        navItem.forEach(item => {
+            item.classList.remove("text-black");
+            item.classList.add("text-white");
+        });
+        imgNav.setAttribute("src", "assets/img/public/mainLogo.png");
+    }
+}
+
+
+// ✅ تحديث النمط عند التمرير أو فتح القائمة أو تغيير وضع `dark mode`
+window.addEventListener("scroll", updateNavbarStyle);
+navbarCollapse.addEventListener("show.bs.collapse", updateNavbarStyle);
+navbarCollapse.addEventListener("hide.bs.collapse", updateNavbarStyle);
+checkbox.addEventListener("change", updateNavbarStyle);
+
+navbarToggler.addEventListener("click", 
+    (e) => {
+        let menuOpen = navbarCollapse.classList.contains("show");
+        let atTop = window.scrollY === 0;
+        if(!menuOpen &&atTop) {
+            navbar.classList.add("nav-af-scrol");
+            navItem.forEach(item => {
+                item.classList.add("text-black");
+                item.classList.remove("text-white");
+            });
+            imgNav.setAttribute("src", "assets/img/public/logo-2-inverted-removebg-preview.png");
+    
+            if (checkbox.checked) {
+                navbar.classList.add("dark");
+                navItem.forEach(item => {
+                    item.classList.remove("text-black");
+                    item.classList.add("text-white");
+                    navbarTogglerIcon.classList.add("navarToggleIcon");
+            navbarToggler.classList.add("navbarToggler")
+                });
+                imgNav.setAttribute("src", "assets/img/public/mainLogo.png");
+            } else {
+                navbar.classList.remove("dark");
+                navbarTogglerIcon.classList.remove("navarToggleIcon");
+            navbarToggler.classList.remove("navbarToggler")
+            }
         }
-        imgNav.setAttribute("src", "assets/img/public/mainLogo.png")
-        navbar.classList.remove("dark"); // to light and dark mode
-
-
-
+        else if(atTop && menuOpen){
+            
+        }
+       
     }
-})
+);
 
-btnNavbar.addEventListener("click", function (e) {
-    navbar.classList.add("nav-af-scrol");
-    for (let i = 0; i < navItem.length; i++) {
-        navItem[i].classList.add("text-black");
-        navItem[i].classList.remove("text-white");
-    }
-    imgNav.setAttribute("src", "assets/img/public/logo-2-inverted-removebg-preview.png")
-})
+
 // end nav bar on scroll
 // show icon to scroll to top
 let iconScrollTop = document.querySelector(".scroll-to-top");
@@ -118,13 +154,13 @@ window.addEventListener("load", function () {
 
 let background = document.querySelector(".background");
 let navbarTogglerIcon = document.querySelector(".navbar-toggler .navbar-toggler-icon");
-let navbarToggler = document.querySelector(".navbar-toggler")
 let resumeSection = document.querySelector(".resume--section")
 console.log(resumeSection)
 checkbox.addEventListener("change", function () {
     if (this.checked) {
         // for navbar
-        if (window.scrollY >= 100) {
+        
+           if(window.scrollY>0){
             navbar.classList.add("dark");
             for (let i = 0; i < navItem.length; i++) {
                 navItem[i].classList.remove("text-black");
@@ -133,7 +169,8 @@ checkbox.addEventListener("change", function () {
             imgNav.setAttribute("src", "assets/img/public/mainLogo.png")
             navbarTogglerIcon.classList.add("navarToggleIcon");
             navbarToggler.classList.add("navbarToggler")
-        }
+           }
+        
         // end for navbar
         // resume section
      
@@ -158,6 +195,7 @@ checkbox.addEventListener("change", function () {
         document.querySelectorAll("a").forEach(el => {
             el.classList.add("text-white");
         });
+       
         document.querySelectorAll(".info--forMe .list-group-item").forEach(el => {
             el.classList.add("bg-black");
             el.classList.add("text-white");
@@ -183,7 +221,8 @@ checkbox.addEventListener("change", function () {
 
     } else {
         // for navbar
-        if (window.scrollY >= 100) {
+        
+           if(window.scrollY>0){
             navbar.classList.remove("dark");
             for (let i = 0; i < navItem.length; i++) {
                 navItem[i].classList.add("text-black");
@@ -192,9 +231,10 @@ checkbox.addEventListener("change", function () {
             imgNav.setAttribute("src", "assets/img/public/logo-2-inverted-removebg-preview.png")
             navbarTogglerIcon.classList.remove("navarToggleIcon");
             navbarToggler.classList.remove("navbarToggler")
+           }
 
 
-        }
+       
         // end for navbar
 
         // all section
@@ -231,6 +271,11 @@ checkbox.addEventListener("change", function () {
            
             el.classList.remove("text-white");
         });
+        document.querySelectorAll(".item--blog  a").forEach(el => {
+           
+            el.classList.remove("text-white");
+        });
+      
         document.querySelectorAll(".item--blog  a").forEach(el => {
            
             el.classList.remove("text-white");
